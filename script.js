@@ -44,4 +44,26 @@ btnToggle.addEventListener('click', () => {
   btnToggle.textContent = isHidden ? '▼' : '▲';
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const imagens = document.querySelectorAll('.expandir-img');
+  const modal = document.getElementById('modal-img');
+  const imgExpandida = document.getElementById('img-expandida');
+  const fechar = document.getElementById('fechar-modal');
 
+  imagens.forEach(img => {
+    img.addEventListener('click', () => {
+      imgExpandida.src = img.src;
+      modal.style.display = 'flex';
+    });
+  });
+
+  fechar.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
