@@ -67,3 +67,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+document.querySelectorAll('.detalhes-btn').forEach(botao => {
+  botao.addEventListener('click', function () {
+    const produto = this.closest('.produto');
+    const detalhes = produto.querySelector('.detalhes-produto');
+    detalhes.classList.toggle('show');
+    this.textContent = detalhes.classList.contains('show') ? 'Ocultar' : 'Detalhes';
+  });
+});
