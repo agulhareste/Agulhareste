@@ -33,3 +33,15 @@ document.querySelectorAll('#filtros button').forEach(botao => {
     this.classList.add('ativo');
   });
 });
+
+
+const btnToggle = document.getElementById('btn-toggle-filtros');
+const filtros = document.getElementById('filtros');
+
+btnToggle.addEventListener('click', () => {
+  const isHidden = filtros.classList.toggle('hidden');
+  btnToggle.setAttribute('aria-expanded', !isHidden);
+  btnToggle.textContent = isHidden ? '▼' : '▲';
+});
+
+

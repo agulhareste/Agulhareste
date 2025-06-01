@@ -13,18 +13,21 @@
     </header>      
 
   <main>
-
-    <div class="filtro" id="filtros">
-      <button data-filtro="todos">Todos</button>
-      <button data-filtro="jogos-americanos">Jogos Americanos</button>
-      <button data-filtro="suportes-plantas">Suportes de Plantas</button>
-      <button data-filtro="roupas">Roupas</button>
-      <button data-filtro="porta-copos">Porta Copos</button>
-      <button data-filtro="tapetes">Tapetes</button>
-      <button data-filtro="jogo-baneiro">Jogos de Banheiro</button>
-      <button data-filtro="acessorios">Acessórios</button>
-      <button data-filtro="utilidades">Utilidades</button>
+    <div class="filtro-container">
+      <div class="filtro" id="filtros">
+        <button data-filtro="todos">Todos</button>
+        <button data-filtro="jogos-americanos">Jogos Americanos</button>
+        <button data-filtro="suportes-plantas">Suportes de Plantas</button>
+        <button data-filtro="roupas">Roupas</button>
+        <button data-filtro="porta-copos">Porta Copos</button>
+        <button data-filtro="tapetes">Tapetes</button>
+        <button data-filtro="jogo-banheiro">Jogos de Banheiro</button>
+      </div>
+      <button id="btn-toggle-filtros" aria-expanded="true" aria-controls="filtros">
+        ▲
+      </button>
     </div>
+    
 
     
     <section id="produtos">
